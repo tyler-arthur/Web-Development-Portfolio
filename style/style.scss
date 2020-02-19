@@ -1,5 +1,6 @@
 $black: black;
 $white: white;
+$codeFont: 'Source Code Pro', monospace;
 
 body, html {
     height: 100%;
@@ -40,7 +41,7 @@ body, html {
     top: 0;
     right: 0;
     .icon {
-        margin: 0px 5px 0px 5px;
+        margin: 5px 5px 0px 5px;
     }
     i {
         color: white;
@@ -72,4 +73,91 @@ body, html {
   
 .active {
     background-color: #4CAF50; /* Add an active/current color */
+}
+
+// code colors
+.var-color {
+    color: rgb(6, 157, 177);
+    font-family: $codeFont;
+}
+
+.dec-color {
+    color: rgb(0, 89, 255);
+    font-family: $codeFont;
+}
+
+.string-color {
+    color: coral;
+    font-family: $codeFont;
+}
+
+.comment {
+    color: palegreen;
+    font-family: $codeFont;
+}
+
+.method {
+	color: rgb(255, 255, 87);
+    font-family: $codeFont;
+}
+
+.html {
+    color: grey;
+    // font-family: $codeFont;
+}
+
+// styles for typewriter effect
+.var-highlight{
+    color: #C0AD60;
+}
+.string-highlight{
+    color: rgba(253, 149, 90, 0.8);
+}
+
+.code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 80vw;
+    max-width: 80vw;
+}
+
+#console-log {
+	color: black;
+	.comment {
+		color: green;
+	}
+}
+
+#typewriter{
+        font-size: 1.5em;
+        margin: 0;
+        font-family: $codeFont;
+        color: rgb(226, 226, 226);
+        background: #0a0a0a;
+
+        &:after{
+            content: "|";
+            animation: blink 500ms linear infinite alternate;
+        }
+}
+
+@-webkit-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }

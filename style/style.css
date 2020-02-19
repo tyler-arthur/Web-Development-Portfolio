@@ -34,7 +34,7 @@ body, html {
 }
 
 .icon-top .icon {
-  margin: 0px 5px 0px 5px;
+  margin: 5px 5px 0px 5px;
 }
 
 .icon-top i {
@@ -74,5 +74,101 @@ body, html {
 .active {
   background-color: #4CAF50;
   /* Add an active/current color */
+}
+
+.var-color {
+  color: #069db1;
+  font-family: "Source Code Pro", monospace;
+}
+
+.dec-color {
+  color: #0059ff;
+  font-family: "Source Code Pro", monospace;
+}
+
+.string-color {
+  color: coral;
+  font-family: "Source Code Pro", monospace;
+}
+
+.comment {
+  color: palegreen;
+  font-family: "Source Code Pro", monospace;
+}
+
+.method {
+  color: #ffff57;
+  font-family: "Source Code Pro", monospace;
+}
+
+.html {
+  color: grey;
+}
+
+.var-highlight {
+  color: #C0AD60;
+}
+
+.string-highlight {
+  color: rgba(253, 149, 90, 0.8);
+}
+
+.code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 80vw;
+  max-width: 80vw;
+}
+
+#console-log {
+  color: black;
+}
+
+#console-log .comment {
+  color: green;
+}
+
+#typewriter {
+  font-size: 1.5em;
+  margin: 0;
+  font-family: "Source Code Pro", monospace;
+  color: #e2e2e2;
+  background: #0a0a0a;
+}
+
+#typewriter:after {
+  content: "|";
+  -webkit-animation: blink 500ms linear infinite alternate;
+          animation: blink 500ms linear infinite alternate;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
