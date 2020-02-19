@@ -1,0 +1,26 @@
+{
+  "name": "Web-Development-Portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarthurf/Web-Development-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarthurf/Web-Development-Portfolio/issues"
+  },
+  "homepage": "https://github.com/tarthurf/Web-Development-Portfolio#readme",
+  "dependencies": {
+    "bulma": "^0.8.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
+    "sass": "^1.25.0"
+  }
+}
