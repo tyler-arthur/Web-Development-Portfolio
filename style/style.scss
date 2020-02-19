@@ -17,6 +17,8 @@ body, html {
     background-size: cover;
 }
 
+
+
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
     .parallax {
@@ -32,10 +34,24 @@ body, html {
     background-color: white;
 }
 
+// Top icons
+.icon-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    .icon {
+        margin: 0px 5px 0px 5px;
+    }
+    i {
+        color: white;
+        font-size: 24px;
+    }
+}
+
 // Icon Bar
 .icon-bar {
     width: 50px; /* Set a specific width */
-    background-color: #555; /* Dark-grey background */
+    // background-color: #555;
     position: fixed;
     bottom: 0;
     right: 0;

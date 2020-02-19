@@ -27,11 +27,24 @@ body, html {
   background-color: white;
 }
 
+.icon-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.icon-top .icon {
+  margin: 0px 5px 0px 5px;
+}
+
+.icon-top i {
+  color: white;
+  font-size: 24px;
+}
+
 .icon-bar {
   width: 50px;
   /* Set a specific width */
-  background-color: #555;
-  /* Dark-grey background */
   position: fixed;
   bottom: 0;
   right: 0;
