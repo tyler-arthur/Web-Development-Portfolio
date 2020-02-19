@@ -1,0 +1,59 @@
+$black: black;
+$white: white;
+
+body, html {
+    height: 100%;
+}
+  
+    .parallax {
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+}
+
+// Icon Bar
+.icon-bar {
+    width: 50px; /* Set a specific width */
+    background-color: #555; /* Dark-grey background */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+  
+.icon-bar a {
+    display: block; /* Make the links appear below each other instead of side-by-side */
+    text-align: center; /* Center-align text */
+    padding: 16px; /* Add some padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 16px; /* Increased font-size */
+}
+  
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+  
+.active {
+    background-color: #4CAF50; /* Add an active/current color */
+}
