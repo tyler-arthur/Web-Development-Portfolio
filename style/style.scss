@@ -3,19 +3,19 @@ $white: white;
 $codeFont: 'Source Code Pro', monospace;
 
 body, html {
-    height: 100%;
+    height: 100vh;
 }
   
-    .parallax {
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.parallax {
+
+/* Full height */
+height: 100vh;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 
@@ -52,10 +52,10 @@ body, html {
 // Icon Bar
 .icon-bar {
     width: 50px; /* Set a specific width */
-    // background-color: #555;
+    background-color: black;
     position: fixed;
     bottom: 0;
-    right: 0;
+    left: 0;
 }
   
 .icon-bar a {
@@ -160,4 +160,9 @@ pre {
 @keyframes blink{
     0%{opacity: 0;}
     100%{opacity: 1;}
+}
+
+.about-left {
+    height: 100vh;
+    background-color: darkslategrey;
 }

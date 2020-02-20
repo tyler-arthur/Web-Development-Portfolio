@@ -1,10 +1,10 @@
 body, html {
-  height: 100%;
+  height: 100vh;
 }
 
 .parallax {
   /* Full height */
-  height: 100%;
+  height: 100vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -45,9 +45,10 @@ body, html {
 .icon-bar {
   width: 50px;
   /* Set a specific width */
+  background-color: black;
   position: fixed;
   bottom: 0;
-  right: 0;
+  left: 0;
 }
 
 .icon-bar a {
@@ -170,5 +171,10 @@ pre {
   100% {
     opacity: 1;
   }
+}
+
+.about-left {
+  height: 100vh;
+  background-color: darkslategrey;
 }
 /*# sourceMappingURL=style.css.map */
