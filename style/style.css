@@ -140,6 +140,18 @@ body, html {
   font-size: 24px;
 }
 
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .icon-bar {
   width: 50px;
   /* Set a specific width */

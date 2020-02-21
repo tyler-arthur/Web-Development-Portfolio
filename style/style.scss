@@ -42,6 +42,12 @@ background-size: cover;
     }
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // Icon Bar
 .icon-bar {
     width: 50px; /* Set a specific width */
