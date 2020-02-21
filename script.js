@@ -69,3 +69,15 @@ var typer = document.getElementById('typewriter');
 typewriter = setupTypewriter(typewriter);
 
 typewriter.type();
+
+// carousel cards
+let cardValue;
+const cardEl = $(".card");
+cardEl.mouseover(function (event) {
+    cardValue = event.target
+    console.log(cardValue);
+    
+
+    
+})
+    

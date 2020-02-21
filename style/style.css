@@ -102,6 +102,124 @@ pre {
   }
 }
 
+.carousel-container {
+  position: relative;
+  height: 300px;
+  width: 600px;
+  top: 60px;
+  left: calc(50% - 300px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  -webkit-box-shadow: -1rem 0 3rem #000;
+          box-shadow: -1rem 0 3rem #000;
+  /*   margin-left: -50px; */
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+  margin-left: -50px;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: #009ad9;
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(65%, #ffff57), to(white));
+  background: linear-gradient(90deg, black 0%, #ffff57 65%, white 100%);
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+
 body, html {
   height: 100%;
   background-color: black;
@@ -131,7 +249,9 @@ body, html {
 }
 
 .icon-top .icon {
-  margin: 5px 5px 0px 5px;
+  margin: 1vh;
+  font-size: 1.5em;
+  color: white;
 }
 
 .icon-top i {
@@ -205,8 +325,8 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://s1.qwant.com/thumbr/0x380/1/3/9553dd2a542b2b4f2354f87cdd128734cdbbdf3218f7c530a88e7be9cf6f16/Cool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-110.jpg?u=http%3A%2F%2Fwww.technocrazed.com%2Fwp-content%2Fuploads%2F2015%2F11%2FCool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-110.jpg&q=0&b=1&p=0&a=1");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://s1.qwant.com/thumbr/0x380/1/3/9553dd2a542b2b4f2354f87cdd128734cdbbdf3218f7c530a88e7be9cf6f16/Cool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-110.jpg?u=http%3A%2F%2Fwww.technocrazed.com%2Fwp-content%2Fuploads%2F2015%2F11%2FCool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-110.jpg&q=0&b=1&p=0&a=1");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/48091943_10213011695114783_7352508205685014528_o.jpg?_nc_cat=103&_nc_ohc=BmNrXj3HgDUAX9QFVO0&_nc_ht=scontent-lax3-1.xx&oh=9c0d3ce18b3b5698b3c6aa3d2a7072a3&oe=5EC22BD7");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/48091943_10213011695114783_7352508205685014528_o.jpg?_nc_cat=103&_nc_ohc=BmNrXj3HgDUAX9QFVO0&_nc_ht=scontent-lax3-1.xx&oh=9c0d3ce18b3b5698b3c6aa3d2a7072a3&oe=5EC22BD7");
 }
 
 #head-shot {
@@ -251,5 +371,25 @@ body, html {
   -o-border-image: linear-gradient(to bottom, #ffff57, rgba(0, 0, 0, 0)) 1 100%;
      border-image: -webkit-gradient(linear, left top, left bottom, from(#ffff57), to(rgba(0, 0, 0, 0))) 1 100%;
      border-image: linear-gradient(to bottom, #ffff57, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.center {
+  position: relative;
+  top: 12%;
+  left: 45%;
+  font-size: 3em;
+  color: white;
+}
+
+#project-image {
+  background-color: white;
+  padding: 4vh;
+  margin: auto;
+  max-width: 100vh;
+}
+
+#project-image img {
+  position: relative;
+  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */
