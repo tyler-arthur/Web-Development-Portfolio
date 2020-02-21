@@ -1,15 +1,17 @@
-$black: black;
-$white: white;
-$codeFont: 'Source Code Pro', monospace;
+@import 'colors';
+@import 'typewriter';
+
 
 body, html {
-    height: 100vh;
+    height: 100%;
+    background-color: black;
 }
   
 .parallax {
 
 /* Full height */
-height: 100vh;
+height: 100%;
+// margin-bottom: 10px;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -18,21 +20,11 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
-
-
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
     .parallax {
       background-attachment: scroll;
     }
-}
-
-.black {
-    background-color: black;
-}
-
-.white {
-    background-color: white;
 }
 
 // Top icons
@@ -44,6 +36,7 @@ background-size: cover;
         margin: 5px 5px 0px 5px;
     }
     i {
+        z-index: 1;
         color: white;
         font-size: 24px;
     }
@@ -56,6 +49,7 @@ background-size: cover;
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 1;
 }
   
 .icon-bar a {
@@ -66,7 +60,19 @@ background-size: cover;
     color: white; /* White text color */
     font-size: 16px; /* Increased font-size */
 }
-  
+
+@media only screen and (max-device-width: 768px) {
+    .icon-bar {
+        float: left;
+        display: flex;
+        top: auto;
+    }
+    
+    .icon-bar a {
+        display: inline-block;
+    }
+}
+
 .icon-bar a:hover {
     background-color: #000; /* Add a hover color */
 }
@@ -75,94 +81,51 @@ background-size: cover;
     background-color: #4CAF50; /* Add an active/current color */
 }
 
-// code colors
-.var-color {
-    color: rgb(6, 157, 177);
-    font-family: $codeFont;
-}
-
-.dec-color {
-    color: rgb(0, 89, 255);
-    font-family: $codeFont;
-}
-
-.string-color {
-    color: coral;
-    font-family: $codeFont;
-}
-
-.comment {
-    color: palegreen;
-    font-family: $codeFont;
-}
-
-.method {
-	color: rgb(255, 255, 87);
-    font-family: $codeFont;
-}
-
-.html {
-    color: grey;
-    // font-family: $codeFont;
-}
-
-// styles for typewriter effect
-.var-highlight{
-    color: #C0AD60;
-}
-.string-highlight{
-    color: rgba(253, 149, 90, 0.8);
-}
-
-.code {
+#about {
     display: flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://s1.qwant.com/thumbr/0x380/1/3/9553dd2a542b2b4f2354f87cdd128734cdbbdf3218f7c530a88e7be9cf6f16/Cool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-110.jpg?u=http%3A%2F%2Fwww.technocrazed.com%2Fwp-content%2Fuploads%2F2015%2F11%2FCool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-110.jpg&q=0&b=1&p=0&a=1");
+}
+
+#head-shot {
+    border: rgb(24, 27, 27) 1em solid;
     justify-content: center;
-    align-items: center;
+    max-width: 40vw;
+    max-height: 80vh;
+    position: absolute;
+    left: 20%;
+    top: 113%;
+    z-index: 1;
 }
 
-pre {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    width: 80vw;
-    max-width: 80vw;
-}
-
-#console-log {
-	color: black;
-	.comment {
-		color: green;
-	}
-}
-
-#typewriter{
-        font-size: 1.5em;
-        margin: 0;
-        font-family: $codeFont;
-        color: rgb(226, 226, 226);
-        background: #0a0a0a;
-
-        &:after{
-            content: "|";
-            animation: blink 500ms linear infinite alternate;
-        }
-}
-
-@-webkit-keyframes blink{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-
-@-moz-keyframes blink{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-
-@keyframes blink{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-
-.about-left {
+.full-block {
+    align-self: flex-start;
+    position: absolute;
     height: 100vh;
-    background-color: darkslategrey;
+    width: 33vh;
+    margin-left: 8vh;
+    z-index: -1;
+    background-color: white;
+}
+
+#about-left {
+    height: auto;
+}
+
+@media only screen and (max-device-width: 768px) {
+    #about-left {
+        display: none;
+    }
+}
+
+#about-text {
+    padding: 0.5em;
+    margin-top: 15vh;
+    border-width: 1em;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        rgb(255, 255, 87), 
+        rgba(0, 0, 0, 0)
+      ) 1 100%;
 }

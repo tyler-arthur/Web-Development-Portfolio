@@ -1,0 +1,47 @@
+.code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 80vw;
+    max-width: 80vw;
+    background-color: black;
+}
+
+#console-log {
+	color: black;
+	.comment {
+		color: green;
+	}
+}
+
+#typewriter{
+        font-size: 1.5em;
+        margin: 0;
+        font-family: $codeFont;
+        color: rgb(226, 226, 226);
+
+        &:after{
+            content: "|";
+            animation: blink 500ms linear infinite alternate;
+        }
+}
+
+@-webkit-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}

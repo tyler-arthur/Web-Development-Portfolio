@@ -1,80 +1,9 @@
-body, html {
-  height: 100vh;
-}
-
-.parallax {
-  /* Full height */
-  height: 100vh;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
-  }
-}
-
 .black {
   background-color: black;
 }
 
 .white {
   background-color: white;
-}
-
-.icon-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-}
-
-.icon-top .icon {
-  margin: 5px 5px 0px 5px;
-}
-
-.icon-top i {
-  color: white;
-  font-size: 24px;
-}
-
-.icon-bar {
-  width: 50px;
-  /* Set a specific width */
-  background-color: black;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
-.icon-bar a {
-  display: block;
-  /* Make the links appear below each other instead of side-by-side */
-  text-align: center;
-  /* Center-align text */
-  padding: 16px;
-  /* Add some padding */
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  /* Add transition for hover effects */
-  color: white;
-  /* White text color */
-  font-size: 16px;
-  /* Increased font-size */
-}
-
-.icon-bar a:hover {
-  background-color: #000;
-  /* Add a hover color */
-}
-
-.active {
-  background-color: #4CAF50;
-  /* Add an active/current color */
 }
 
 .var-color {
@@ -131,6 +60,7 @@ pre {
   word-wrap: break-word;
   width: 80vw;
   max-width: 80vw;
+  background-color: black;
 }
 
 #console-log {
@@ -146,7 +76,6 @@ pre {
   margin: 0;
   font-family: "Source Code Pro", monospace;
   color: #e2e2e2;
-  background: #0a0a0a;
 }
 
 #typewriter:after {
@@ -173,8 +102,142 @@ pre {
   }
 }
 
-.about-left {
+body, html {
+  height: 100%;
+  background-color: black;
+}
+
+.parallax {
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+.icon-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.icon-top .icon {
+  margin: 5px 5px 0px 5px;
+}
+
+.icon-top i {
+  z-index: 1;
+  color: white;
+  font-size: 24px;
+}
+
+.icon-bar {
+  width: 50px;
+  /* Set a specific width */
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.icon-bar a {
+  display: block;
+  /* Make the links appear below each other instead of side-by-side */
+  text-align: center;
+  /* Center-align text */
+  padding: 16px;
+  /* Add some padding */
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  /* Add transition for hover effects */
+  color: white;
+  /* White text color */
+  font-size: 16px;
+  /* Increased font-size */
+}
+
+@media only screen and (max-device-width: 768px) {
+  .icon-bar {
+    float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: auto;
+  }
+  .icon-bar a {
+    display: inline-block;
+  }
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+  /* Add a hover color */
+}
+
+.active {
+  background-color: #4CAF50;
+  /* Add an active/current color */
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://s1.qwant.com/thumbr/0x380/1/3/9553dd2a542b2b4f2354f87cdd128734cdbbdf3218f7c530a88e7be9cf6f16/Cool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-110.jpg?u=http%3A%2F%2Fwww.technocrazed.com%2Fwp-content%2Fuploads%2F2015%2F11%2FCool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-110.jpg&q=0&b=1&p=0&a=1");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://s1.qwant.com/thumbr/0x380/1/3/9553dd2a542b2b4f2354f87cdd128734cdbbdf3218f7c530a88e7be9cf6f16/Cool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-110.jpg?u=http%3A%2F%2Fwww.technocrazed.com%2Fwp-content%2Fuploads%2F2015%2F11%2FCool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-110.jpg&q=0&b=1&p=0&a=1");
+}
+
+#head-shot {
+  border: #181b1b 1em solid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 40vw;
+  max-height: 80vh;
+  position: absolute;
+  left: 20%;
+  top: 113%;
+  z-index: 1;
+}
+
+.full-block {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  position: absolute;
   height: 100vh;
-  background-color: darkslategrey;
+  width: 33vh;
+  margin-left: 8vh;
+  z-index: -1;
+  background-color: white;
+}
+
+#about-left {
+  height: auto;
+}
+
+@media only screen and (max-device-width: 768px) {
+  #about-left {
+    display: none;
+  }
+}
+
+#about-text {
+  padding: 0.5em;
+  margin-top: 15vh;
+  border-width: 1em;
+  border-style: solid;
+  -o-border-image: linear-gradient(to bottom, #ffff57, rgba(0, 0, 0, 0)) 1 100%;
+     border-image: -webkit-gradient(linear, left top, left bottom, from(#ffff57), to(rgba(0, 0, 0, 0))) 1 100%;
+     border-image: linear-gradient(to bottom, #ffff57, rgba(0, 0, 0, 0)) 1 100%;
 }
 /*# sourceMappingURL=style.css.map */

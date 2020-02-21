@@ -1,0 +1,48 @@
+$codeFont: 'Source Code Pro', monospace;
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+}
+
+// code colors
+.var-color {
+    color: rgb(6, 157, 177);
+    font-family: $codeFont;
+}
+
+.dec-color {
+    color: rgb(0, 89, 255);
+    font-family: $codeFont;
+}
+
+.string-color {
+    color: coral;
+    font-family: $codeFont;
+}
+
+.comment {
+    color: palegreen;
+    font-family: $codeFont;
+}
+
+.method {
+	color: rgb(255, 255, 87);
+    font-family: $codeFont;
+}
+
+.html {
+    color: grey;
+    // font-family: $codeFont;
+}
+
+// styles for typewriter effect
+.var-highlight{
+    color: #C0AD60;
+}
+.string-highlight{
+    color: rgba(253, 149, 90, 0.8);
+}
