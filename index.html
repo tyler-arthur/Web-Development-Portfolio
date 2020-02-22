@@ -14,7 +14,8 @@
 </head>
 
 <body>
-   
+    
+    <a id="homeA" href="" class="scrollspy"></a>
     <div class="icon-top">
         <span class="icon">
             <i class="fab fa-github"></i>
@@ -25,11 +26,10 @@
     </div>    
 
     <div class="icon-bar">
-        <a class="active" href="#"><i class="fa fa-home"></i></a>
-        <a href="#"><i class="fa fa-search"></i></a>
-        <a href="#"><i class="fa fa-envelope"></i></a>
-        <a href="#"><i class="fa fa-globe"></i></a>
-        <a href="#"><i class="fa fa-trash"></i></a>
+        <a class="active" id="home-nav" href="#homeA"><i class="fa fa-home"></i></a>
+        <a class="" href="#aboutA" id="about-nav"><i class="fas fa-address-card"></i></a>
+        <a  class="" href="#portfolioA" id="portfolio-nav"><i class="fas fa-drafting-compass" id="forms-nav"></i></a>
+        <a  class="" href="#formsA"><i class="fa fa-envelope"></i></a>
     </div>
 
     <section id="home" class="parallax black code">
@@ -43,14 +43,16 @@
 6   
 </pre>
         </div>
+        <!-- <a class="down" type="button" href="#aboutA"><i class="fas fa-angle-down has-text-white"></i></a> -->
     </section>
 
     <section id="about" class="parallax">
-        <img id="head-shot" src="style/images/img_1148conv_large.jpg" alt="">
+        <a id="aboutA" href="" class="scrollspy"></a>
+        <img id="head-shot" src="style/images/img_1121conv_large_1.jpg" alt="">
 
         <div class="container columns is-marginless">
             <div id="about-left" class="column is-3 is-offset-1 is-relative has-background-white-ter">
-
+                <p class="title vert-text has-text-black is-size-1">Design<strong><span>/</span></strong>Function</p>
             </div>
             <div class="column">
             </div>
@@ -67,84 +69,64 @@
                 </div>
             </div>
         </div>
-
+        <a class="down" href="#portfolioA"><i class="fas fa-angle-down has-text-white"></i></a>
     </section>
 
-    <section id="portfoio" class="parallax">
+    <section id="portfolio" class="parallax">
+        <a id="portfolioA" href="" class="scrollspy"></a>
         <!-- Carousel Cards -->
-        <div class="carousel-container">
-            <div class="card" value="1">
-                <!-- <h3 class="title"></h3> -->
-                <span class="icon center">
-                    <i class="fas fa-unlock-alt"></i>
-                </span>
-                <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                </div>
-                <div class="circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="stroke" cx="60" cy="60" r="50" />
-                    </svg>
-                </div>
-            </div>
-            <div class="card" value="2">
-                <!-- <h3 class="title">Card 2</h3> -->
-                <span class="icon center">
-                    <i class="fas fa-calendar-check"></i>
-                </span>
-                <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                </div>
-                <div class="circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="stroke" cx="60" cy="60" r="50" />
-                    </svg>
-                </div>
-            </div>
-            <div class="card" value="3">
-                <!-- <h3 class="title">Card 3</h3> -->
-                <span class="icon center">
-                    <i class="fas fa-cloud"></i>
-                </span>
-                <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                </div>
-                <div class="circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="stroke" cx="60" cy="60" r="50" />
-                    </svg>
-                </div>
-            </div>
-            <div class="card" value="4">
-                <!-- <h3 class="title">Card 4</h3> -->
-                <span class="icon center">
-                    <i class="fas fa-map-marker-alt"></i>
-                </span>
-                <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                </div>
-                <div class="circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="stroke" cx="60" cy="60" r="50" />
-                    </svg>
-                </div>
-            </div>
+        
+        <div id="carousel-buttons">
+            <button class="button is-outlined"></button>
+            <button class="button is-outlined"></button>
+            <button class="button is-outlined"></button>
+            <button class="button is-outlined"></button>
         </div>
-        <div id="yellow-border"></div>
         <!-- Project Image -->
         <div id="project-image">
             <img src="https://github.com/tarthurf/Weather-Dashboard/raw/master/weatherdashboard.png" alt="">
         </div>
-
+        <a class="down" href="#formsA"><i class="fas fa-angle-down has-text-white"></i></a>
     </section>
 
     <section id="forms" class="parallax">
-        
+        <a id="formsA" href="" class="scrollspy"></a>
+        <form action="https://formspree.io/xknravez"
+             method="POST" class="contact-form is-pulled-right">
 
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                    <input class="input" type="text" name="name" placeholder="What's your name?">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="email" name="_replyto" placeholder="you@somewhere.com">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Message</label>
+                <div class="control">
+                    <textarea class="textarea" type="text" name="message" placeholder="Let me know what your thoughts..."></textarea>
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button value="send" type="submit" class="button is-dark">Submit</button>
+                </div>
+                <!-- <div class="control">
+                    <button class="button is-link is-light">Cancel</button>
+                </div> -->
+            </div>
+        </form>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

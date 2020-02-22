@@ -3,8 +3,10 @@
 @import 'carousel';
 
 body, html {
+    scroll-behavior: smooth;
     height: 100%;
     background-color: black;
+    min-height: 80px;
 }
   
 .parallax {
@@ -25,6 +27,14 @@ background-size: cover;
     .parallax {
       background-attachment: scroll;
     }
+}
+
+.down {
+    margin: auto;
+    position: absolute;
+    bottom: 0%;
+    margin-bottom: 1em;
+    font-size: 2rem;
 }
 
 // Top icons
@@ -91,7 +101,7 @@ background-size: cover;
 
 #about {
     display: flex;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/48091943_10213011695114783_7352508205685014528_o.jpg?_nc_cat=103&_nc_ohc=BmNrXj3HgDUAX9QFVO0&_nc_ht=scontent-lax3-1.xx&oh=9c0d3ce18b3b5698b3c6aa3d2a7072a3&oe=5EC22BD7");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/crater-bw.jpg");
 }
 
 #head-shot {
@@ -115,6 +125,15 @@ background-size: cover;
     background-color: white;
 }
 
+.vert-text {
+    writing-mode: tb-rl;
+    position: relative;
+    top: 30%;
+    span {
+        color: #C0AD60;
+    }
+}
+
 #about-left {
     height: auto;
 }
@@ -133,9 +152,13 @@ background-size: cover;
     border-image: 
       linear-gradient(
         to bottom, 
-        rgb(255, 255, 87), 
+        #C0AD60, 
         rgba(0, 0, 0, 0)
       ) 1 100%;
+}
+
+#portfolio {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/beach.jpg");
 }
 
 .center {
@@ -146,14 +169,43 @@ background-size: cover;
     color: white;
 }
 
+#carousel-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    top: 25%;
+    button {
+        height: 1em;
+        margin: 1em;
+        border: solid #C0AD60 2px;
+        border-radius: 0px;
+        background-color: transparent;
+    }
+}
+
 #project-image {
-    background-color: white;
+    background-color: white 0%;
     padding: 4vh;
     margin: auto;
     max-width: 100vh;
+    border: 1em double #C0AD60;
+    position: relative;
+    top: 25%;
     
     img {
         position: relative;
         margin: auto;
+    }
+}
+
+#forms{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/sea-tower-bw.jpg");
+    form {
+        margin: auto;
+        padding: 3rem;
+        position: relative;
+        top: 25%;
+        width: 50vw;
     }
 }

@@ -1,3 +1,5 @@
+// $(".down")
+
 // type writer function
 function setupTypewriter(t) {
     var HTML = t.innerHTML;
@@ -70,14 +72,22 @@ typewriter = setupTypewriter(typewriter);
 
 typewriter.type();
 
-// carousel cards
-let cardValue;
-const cardEl = $(".card");
-cardEl.mouseover(function (event) {
-    cardValue = event.target
-    console.log(cardValue);
-    
+// Active Nav on scroll
+const homeEl = $("#homeA");
+const homeNav = $("#home-nav");
+const aboutEl = $("#aboutA");
+const aboutNav = $("#about-nav");
+const portfolioEl = $("#portfolioA");
+const portfolioNav = $("#portfolio-nav");
+const formsEl = $("#formsA");
+const formsNav = $("#forms-nav");
+document.addEventListener("scroll", function (){
+    if (homeEl.scrollTop() <= 500) {
+        homeNav.addClass("active");
+        aboutNav.removeClass("active");
+        portfolioNav.removeClass("active");
+        formsNav.removeClass("active");
+    } else homeEl.removeClass("active");
+    console.log("Im Scrollin" + aboutEl.scrollTop());
 
-    
 })
-    
