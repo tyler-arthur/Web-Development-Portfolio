@@ -10,7 +10,7 @@ function setupTypewriter(t) {
         tag = "",
         writingTag = false,
         tagOpen = false,
-        typeSpeed = 25,
+        typeSpeed = 20,
     tempTypeSpeed = 0;
 
     var type = function() {
