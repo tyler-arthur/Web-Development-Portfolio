@@ -46,6 +46,9 @@ background-size: cover;
         margin: 1vh;
         font-size: 1.5em;
         color: white;
+        a {
+            color: white !important;
+        }
     }
     i {
         z-index: 1;
@@ -128,7 +131,7 @@ background-size: cover;
 .vert-text {
     writing-mode: tb-rl;
     position: relative;
-    top: 30%;
+    top: 20%;
     span {
         color: #C0AD60;
     }
@@ -157,6 +160,19 @@ background-size: cover;
       ) 1 100%;
 }
 
+#about-text-left {
+    padding: 0.5em;
+    margin-top: 28vh;
+    border-width: 1em;
+    border-style: solid;
+    margin-left: 8vh;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        #C0AD60, 
+        rgba(0, 0, 0, 0)
+      ) 1 100%;
+}
 #portfolio {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/beach.jpg");
 }
@@ -181,10 +197,21 @@ background-size: cover;
         border: solid #C0AD60 2px;
         border-radius: 0px;
         background-color: transparent;
+        transition: border .5s;
+    }
+    button:hover {
+        border: solid #C0AD60 6px;
+        opacity: .5;
+        transition: ease-in .5s;
+        transition: ease-out .5s;
+    }
+    button:focus {
+        background-color: white;
     }
 }
 
 #project-image {
+    width: fit-content;
     background-color: white 0%;
     padding: 4vh;
     margin: auto;
@@ -196,6 +223,13 @@ background-size: cover;
     img {
         position: relative;
         margin: auto;
+        max-height: 50vh;
+        opacity: 1;
+        transition: opacity 1s;
+    }
+    img:hover {
+        opacity: 0.6;
+        transition: ease 1s;
     }
 }
 
@@ -207,5 +241,12 @@ background-size: cover;
         position: relative;
         top: 25%;
         width: 50vw;
+    }
+}
+
+.feild {
+    .input {
+        background-color: opacity($color: white, .8);
+        
     }
 }

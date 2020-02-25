@@ -81,13 +81,80 @@ const portfolioEl = $("#portfolioA");
 const portfolioNav = $("#portfolio-nav");
 const formsEl = $("#formsA");
 const formsNav = $("#forms-nav");
-document.addEventListener("scroll", function (){
-    if (homeEl.scrollTop() <= 500) {
-        homeNav.addClass("active");
-        aboutNav.removeClass("active");
-        portfolioNav.removeClass("active");
-        formsNav.removeClass("active");
-    } else homeEl.removeClass("active");
-    console.log("Im Scrollin" + aboutEl.scrollTop());
+// document.addEventListener("scroll", function (){
+//     if (homeEl.scrollTop() <= 500) {
+//         homeNav.addClass("active");
+//         aboutNav.removeClass("active");
+//         portfolioNav.removeClass("active");
+//         formsNav.removeClass("active");
+//     } else homeEl.removeClass("active");
+//     if (homeEl.scrollTop() <= 1500) {
+//         homeNav.removeClass("active");
+//         aboutNav.addClass("active");
+//         portfolioNav.removeClass("active");
+//         formsNav.removeClass("active");
+//     } else aboutEl.removeClass("active");
+//     if (homeEl.scrollTop() <= 2500) {
+//         homeNav.removeClass("active");
+//         aboutNav.removeClass("active");
+//         portfolioNav.addClass("active");
+//         formsNav.removeClass("active");
+//     } else portfolioEl.removeClass("active");
+//     if (homeEl.scrollTop() <= 3500) {
+//         homeNav.removeClass("active");
+//         aboutNav.removeClass("active");
+//         portfolioNav.removeClass("active");
+//         formsNav.addClass("active");
+//     } else formsEl.removeClass("active");
+//     console.log("Im Scrollin" + aboutEl.scrollTop());
 
-})
+// })
+
+
+// Button Changing function
+const weather = {
+    pic: "https://github.com/tarthurf/Weather-Dashboard/raw/master/weatherdashboard.png",
+    link: "https://github.com/tarthurf/Weather-Dashboard"
+    }
+const planner = {
+    pic: "https://github.com/tarthurf/Day-Planner/raw/master/assets/images/day-planner-screenshot.png",
+    link: "https://github.com/tarthurf/Day-Planner"
+    }
+const munchiMaps = {
+    pic: "https://github.com/tarthurf/MunchiMaps/raw/master/munchimaps.png",
+    link: "https://github.com/tarthurf/MunchiMaps"
+    }
+const password = {
+    pic: "https://github.com/tarthurf/Secure_Password_Generator/raw/master/tarthurf.github.io_Secure_Password_Generator_.png?raw=true",
+    link: "https://github.com/tarthurf/Secure_Password_Generator"
+    }
+
+function changeImage(imgName) {
+    const image = document.querySelector("#project-image > a > img");
+    const imageLink = document.querySelector("#project-image > a");
+    image.src = imgName.pic;
+    imageLink.href = imgName.link
+}
+changeImage(password)
+
+// Word Rotator on about me
+const scroll = $("#word-scroll");
+const wordScrollArray = ["Functional", "Minimal", "Beautiful", "Simplicity"] 
+function wordScroll() {
+    setInterval(() => {
+        setTimeout(() => {
+            scroll.text(wordScrollArray[0])
+        }, 3000);
+        setTimeout(() => {
+            scroll.text(wordScrollArray[1])
+        }, 3000);
+        setTimeout(() => {
+            scroll.text(wordScrollArray[2])
+        }, 3000);
+        setTimeout(() => {
+            scroll.text(wordScrollArray[3])
+        }, 3000);
+        scroll.text()
+    }, 12000);
+}
+wordScroll()

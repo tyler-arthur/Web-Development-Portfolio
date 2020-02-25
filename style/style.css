@@ -395,6 +395,17 @@ body, html {
      border-image: linear-gradient(to bottom, #C0AD60, rgba(0, 0, 0, 0)) 1 100%;
 }
 
+#about-text-left {
+  padding: 0.5em;
+  margin-top: 28vh;
+  border-width: 1em;
+  border-style: solid;
+  margin-left: 8vh;
+  -o-border-image: linear-gradient(to bottom, #C0AD60, rgba(0, 0, 0, 0)) 1 100%;
+     border-image: -webkit-gradient(linear, left top, left bottom, from(#C0AD60), to(rgba(0, 0, 0, 0))) 1 100%;
+     border-image: linear-gradient(to bottom, #C0AD60, rgba(0, 0, 0, 0)) 1 100%;
+}
+
 #portfolio {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("images/beach.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/beach.jpg");
@@ -428,9 +439,27 @@ body, html {
   border: solid #C0AD60 2px;
   border-radius: 0px;
   background-color: transparent;
+  -webkit-transition: border .5s;
+  transition: border .5s;
+}
+
+#carousel-buttons button:hover {
+  border: solid #C0AD60 6px;
+  opacity: .5;
+  -webkit-transition: ease-in .5s;
+  transition: ease-in .5s;
+  -webkit-transition: ease-out .5s;
+  transition: ease-out .5s;
+}
+
+#carousel-buttons button:focus {
+  background-color: white;
 }
 
 #project-image {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: white 0%;
   padding: 4vh;
   margin: auto;
@@ -443,6 +472,16 @@ body, html {
 #project-image img {
   position: relative;
   margin: auto;
+  max-height: 50vh;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+#project-image img:hover {
+  opacity: 0.6;
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
 }
 
 #forms {
@@ -456,5 +495,9 @@ body, html {
   position: relative;
   top: 25%;
   width: 50vw;
+}
+
+.feild .input textarea {
+  opacity: .8;
 }
 /*# sourceMappingURL=style.css.map */

@@ -15,18 +15,18 @@
 
 <body>
     
-    <a id="homeA" href="" class="scrollspy"></a>
+    <a id="homeA" href=""></a>
     <div class="icon-top">
         <span class="icon">
-            <i class="fab fa-github"></i>
+            <a href="https://github.com/tarthurf" style="color: white;"><i class="fab fa-github"></i></a>
         </span>
         <span class="icon">
-            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/tyler-arthur-8a64779b/" style="color: white;"><i class="fab fa-linkedin"></i></a>
         </span>
     </div>    
 
     <div class="icon-bar">
-        <a class="active" id="home-nav" href="#homeA"><i class="fa fa-home"></i></a>
+        <a class="" id="home-nav" href="#homeA"><i class="fa fa-home"></i></a>
         <a class="" href="#aboutA" id="about-nav"><i class="fas fa-address-card"></i></a>
         <a  class="" href="#portfolioA" id="portfolio-nav"><i class="fas fa-drafting-compass" id="forms-nav"></i></a>
         <a  class="" href="#formsA"><i class="fa fa-envelope"></i></a>
@@ -47,12 +47,12 @@
     </section>
 
     <section id="about" class="parallax">
-        <a id="aboutA" href="" class="scrollspy"></a>
+        <a id="aboutA" href=""></a>
         <img id="head-shot" src="style/images/img_1121conv_large_1.jpg" alt="">
 
-        <div class="container columns is-marginless">
+        <div class="container columns is-marginless has-text-center">
             <div id="about-left" class="column is-3 is-offset-1 is-relative has-background-white-ter">
-                <p class="title vert-text has-text-black is-size-1">Design<strong><span>/</span></strong>Function</p>
+                <p class="title vert-text has-text-black is-size-1">Design<strong><span>/</span></strong>Meets<strong><span>/</span></strong><strong id="word-scroll">Simplicity</strong></p>
             </div>
             <div class="column">
             </div>
@@ -61,15 +61,16 @@
                     <h1 class="is-size-1 has-text-light has-text-justified">About Tyler</h1>
                     <br>
                     <p class="has-text-light has-text-">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur porro laboriosam doloribus explicabo qui, ex quod enim? Alias nisi ex, voluptatum repellat officia dolores nihil quos facilis? Quidem, repellendus corrupti?
+                        I'm Tyler. I am a web development student currently attending University of California, San Diego and my graduation date is mid June. I am currently proficient in front end development and am currently completing my back end portion of school.
                     </p>
+                    <br>
                     <p class="has-text-light has-text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur porro laboriosam doloribus explicabo qui, ex quod enim? Alias nisi ex, voluptatum repellat officia dolores nihil quos facilis? Quidem, repellendus corrupti?
+                        I am ambitious and have an insatiable hunger for learning and challenges. I am extremely flexible and can fit into any role in any team. Below are some noteworthy projects I have created or worked on. Please feel free to browse through my commits and view the github page hosting the project.
                     </p>
                 </div>
             </div>
         </div>
-        <a class="down" href="#portfolioA"><i class="fas fa-angle-down has-text-white"></i></a>
+        <!-- <a class="down" href="#portfolioA"><i class="fas fa-angle-down has-text-white"></i></a> -->
     </section>
 
     <section id="portfolio" class="parallax">
@@ -77,59 +78,82 @@
         <!-- Carousel Cards -->
         
         <div id="carousel-buttons">
-            <button class="button is-outlined"></button>
-            <button class="button is-outlined"></button>
-            <button class="button is-outlined"></button>
-            <button class="button is-outlined"></button>
+            <button class="button is-outlined" onclick="changeImage(password)"></button>
+            <button class="button is-outlined" onclick="changeImage(planner)"></button>
+            <button class="button is-outlined" onclick="changeImage(weather)"></button>
+            <button class="button is-outlined" onclick="changeImage(munchiMaps)"></button>
         </div>
         <!-- Project Image -->
         <div id="project-image">
-            <img src="https://github.com/tarthurf/Weather-Dashboard/raw/master/weatherdashboard.png" alt="">
+            <a href=""><img src="https://github.com/tarthurf/Weather-Dashboard/raw/master/weatherdashboard.png" alt=""></a>
         </div>
-        <a class="down" href="#formsA"><i class="fas fa-angle-down has-text-white"></i></a>
+        <!-- <a class="down" href="#formsA"><i class="fas fa-angle-down has-text-white"></i></a> -->
     </section>
 
     <section id="forms" class="parallax">
-        <a id="formsA" href="" class="scrollspy"></a>
-        <form action="https://formspree.io/xknravez"
-             method="POST" class="contact-form is-pulled-right">
-
-            <div class="field">
-                <label class="label">Name</label>
-                <div class="control">
-                    <input class="input" type="text" name="name" placeholder="What's your name?">
+        <a id="formsA" href=""></a>
+        <div class="columns">
+            <div class="column">
+                <div id="about-text-left">
+                    <h1 class="is-size-1 has-text-light has-text-justified"></h1>
+                    <br>
+                    <p class="has-text-light has-text-center is-size-3" style="text-decoration: overline solid black 3px;">
+                        Have any questions? Like What you see?
+                    </p>
+                    <br>
+                    <p class="has-text-light has-text-center is-size-2">
+                        Want to hire me?
+                    </p>
+                    <br>
+                    <p class="has-text-light has-text-center is-size-4">
+                        Use this form to send me a brief email.
+                    </p>
+                    <br>
+                    <br>
                 </div>
             </div>
+            <div class="column">
 
-            <div class="field">
-                <label class="label">Email</label>
-                <div class="control has-icons-left has-icons-right">
-                    <input class="input" type="email" name="_replyto" placeholder="you@somewhere.com">
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-envelope"></i>
-                    </span>
-                </div>
+                <form action="https://formspree.io/xknravez"
+                method="POST" class="contact-form is-pulled-right">
+                
+                    <div class="field">
+                        <label class="label has-text-light">Name</label>
+                        <div class="control">
+                            <input class="input" type="text" name="name" placeholder="What's your name?">
+                        </div>
+                    </div>
+                    
+                    <div class="field">
+                        <label class="label has-text-light">Email</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" name="_replyto" placeholder="you@somewhere.com">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="field">
+                        <label class="label has-text-light">Message</label>
+                        <div class="control">
+                            <textarea class="textarea" type="text" name="message" placeholder="Let me know what your thoughts..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button value="send" type="submit" class="button is-dark">Submit</button>
+                        </div>
+                        <!-- <div class="control">
+                            <button class="button is-link is-light">Cancel</button>
+                        </div> -->
+                    </div>
+                </form>
             </div>
-
-            <div class="field">
-                <label class="label">Message</label>
-                <div class="control">
-                    <textarea class="textarea" type="text" name="message" placeholder="Let me know what your thoughts..."></textarea>
-                </div>
-            </div>
-
-            <div class="field is-grouped">
-                <div class="control">
-                    <button value="send" type="submit" class="button is-dark">Submit</button>
-                </div>
-                <!-- <div class="control">
-                    <button class="button is-link is-light">Cancel</button>
-                </div> -->
-            </div>
-        </form>
-    </section>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        </section>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="node_modules/bulma/css/bulma.css"></script>
     <script src="script.js"></script>
 </body>
